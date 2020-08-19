@@ -1,0 +1,14 @@
+@import '~src/styles.scss';
+
+.sidenav {
+  background-color: $main-color;
+  width: 200px;
+
+  a {
+    color:white;
+  }
+
+  i {
+    padding-right: 10px;
+  }
+}
