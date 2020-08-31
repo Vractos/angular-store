@@ -12,7 +12,7 @@ export class ProductCreateComponent implements OnInit {
 
   product: IProduct = {
     name: '',
-    price: null
+    price: null  // FIX: Esta salvando como string no DB, tem que salvar como number
   }
 
   constructor(private productService: ProductService,

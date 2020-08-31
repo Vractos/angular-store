@@ -24,6 +24,10 @@ export class ProductService {
   create(product: IProduct): Observable<IProduct> {
     return this.http.post<IProduct>(this.baseUrl, product)
   }
+
+  read(): Observable<IProduct[]> {
+    return this.http.get<IProduct[]>(this.baseUrl)
+  }
 }
 
 // export function ConvertToNumber() {
