@@ -21,19 +21,9 @@
       "id": 4
     },
     {
-      "name": "Produto de Teste",
-      "price": 125.88,
+      "name": "Casa",
+      "price": 4849879,
       "id": 5
-    },
-    {
-      "name": "Produto de Teste",
-      "price": 125.88,
-      "id": 6
-    },
-    {
-      "name": "",
-      "price": null,
-      "id": 7
     }
   ]
 }

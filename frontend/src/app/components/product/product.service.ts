@@ -25,3 +25,19 @@ export class ProductService {
     return this.http.post<IProduct>(this.baseUrl, product)
   }
 }
+
+// export function ConvertToNumber() {
+//   return (target: any, key: string) => {
+//     let val = target[key]
+
+//     const getter = () => val
+
+//     const setter = (value: string) => {
+//       val = Number(value)
+//     }
+//     Object.defineProperty(target, key, {
+//       get: getter,
+//       set: setter
+//     })
+//   }
+// }
