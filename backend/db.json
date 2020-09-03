@@ -3,17 +3,26 @@
     {
       "id": 1,
       "name": "Caneta BIC Preta",
-      "price": 5.89
+      "price": 5.89,
+      "stock": 2
     },
     {
       "id": 2,
       "name": "Notebook Mac Pro+",
-      "price": 12000.89
+      "price": 12000.89,
+      "stock": 1
     },
     {
+      "name": "Mouse sem fio",
+      "price": "582.13",
       "id": 3,
-      "name": "Samsung S20+",
-      "price": 5000.89
+      "stock": 5
+    },
+    {
+      "name": "Caderno",
+      "price": "10.90",
+      "id": 4,
+      "stock": 10
     }
   ]
 }

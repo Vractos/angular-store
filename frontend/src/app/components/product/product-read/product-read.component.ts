@@ -12,7 +12,7 @@ import { DialogDeleteComponent } from '../dialogs/dialog-delete/dialog-delete.co
 export class ProductReadComponent implements OnInit {
 
   products: Array<IProduct>
-  displayedColumns = ['id', 'name', 'price', 'action']
+  displayedColumns = ['id', 'name', 'price', 'stock' , 'action']
 
   constructor(private productService: ProductService, private dialog: MatDialog) { }
 

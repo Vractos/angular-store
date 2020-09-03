@@ -12,7 +12,8 @@ export class ProductCreateComponent implements OnInit {
 
   product: IProduct = {
     name: '',
-    price: null  // FIX: Esta salvando como string no DB, tem que salvar como number
+    price: null,  // FIX: Esta salvando como string no DB, tem que salvar como number
+    stock: null
   }
 
   constructor(private productService: ProductService,

@@ -7,6 +7,9 @@
     <mat-form-field>
       <input matInput placeholder="Preço" [(ngModel)]="product.price"  name="price">
     </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Quantidade" [(ngModel)]="product.stock"  name="stock">
+    </mat-form-field>
   </form>
   <button mat-raised-button (click)="createProduct()" color="primary">
     Criar
