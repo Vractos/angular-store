@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 import { IProduct } from '../product.model';
 
-// TODO: replace this with real data from your application
+// ! Replace this with real data from your application
 const EXAMPLE_DATA: Array<IProduct> = [
   {id: 1, name: 'Hydrogen'},
   {id: 2, name: 'Helium'},

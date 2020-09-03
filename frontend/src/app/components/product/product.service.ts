@@ -11,11 +11,11 @@ export class ProductService {
 
   baseUrl = "http://localhost:3001/products"
 
-  constructor(private snackBar: MatSnackBar, private http: HttpClient ) { }
+  constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
   showMessage(msg: string): void {
     this.snackBar.open(msg, 'Fechar', {
-      duration: 3000,
+      duration: 1500,
       horizontalPosition: 'right',
       verticalPosition: 'top'
     })
@@ -28,20 +28,19 @@ export class ProductService {
   read(): Observable<IProduct[]> {
     return this.http.get<IProduct[]>(this.baseUrl)
   }
+
+  readById(id: string): Observable<IProduct> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<IProduct>(url)
+  }
+
+  update(product: IProduct): Observable<IProduct> {
+    const url = `${this.baseUrl}/${product.id}`
+    return this.http.put<IProduct>(url, product)
+  }
+
+  delete(id: string): Observable<IProduct> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<IProduct>(url)
+  }
 }
-
-// export function ConvertToNumber() {
-//   return (target: any, key: string) => {
-//     let val = target[key]
-
-//     const getter = () => val
-
-//     const setter = (value: string) => {
-//       val = Number(value)
-//     }
-//     Object.defineProperty(target, key, {
-//       get: getter,
-//       set: setter
-//     })
-//   }
-// }

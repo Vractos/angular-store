@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from '../product.model';
 import { ProductService } from '../product.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogDeleteComponent } from '../dialogs/dialog-delete/dialog-delete.component';
 
 @Component({
   selector: 'app-product-read',
@@ -10,14 +12,25 @@ import { ProductService } from '../product.service';
 export class ProductReadComponent implements OnInit {
 
   products: Array<IProduct>
-  displayedColumns = ['id','name','price']
+  displayedColumns = ['id', 'name', 'price', 'action']
 
-  constructor(private protectService: ProductService) { }
+  constructor(private productService: ProductService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.protectService.read().subscribe(products => {
+    this.productService.read().subscribe(products => {
       this.products = products
     })
+  }
+
+  deleteProduct(id: string, name: string): void {
+    this.dialog.open(DialogDeleteComponent, {
+      data: { id, name }
+    })
+      .afterClosed().subscribe(() => {
+        this.productService.read().subscribe(products => {
+          this.products = products
+        })
+      })
   }
 
 }
