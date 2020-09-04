@@ -19,10 +19,10 @@
       "stock": 5
     },
     {
-      "name": "Caderno",
-      "price": "10.90",
-      "id": 4,
-      "stock": 10
+      "name": "a nucleo latas ltda",
+      "price": "45",
+      "stock": "12",
+      "id": 4
     }
   ]
 }
